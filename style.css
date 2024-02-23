@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kalam', sans-serif;
+    user-select: none;
+}
+
+:root {
+    --main-orange: orangered;
+    --sub-orange: darkorange;
+    --main-dark: #111;
+    --main-light: khaki;
+}
+
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.8)),
+        url('./pexels-federico-orlandi-3260626.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container, .key-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px 0 var(--main-orange);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    border: 2px solid var(--main-orange);
+    transition: background 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.container {
+    padding: 10px;
+    background: rgba(240, 230, 140, 0.114);
+}
+
+.key-container {
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 8px;
+    color: var(--main-light);
+    margin: 2.5rem;
+    min-width: 150px;
+    background: var(--main-dark);
+}
+
+.key-container h4 {
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.key-content {
+    margin-top: 4px;
+}
+
+.key-container h4,
+.key-content {
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0 var(--main-dark),
+                 2px 2px 0 var(--sub-orange),
+                 3px 3px 1px var(--main-orange);
+}
+
+.container:hover {
+    background: rgba(255, 140, 0, 0.321);
+    box-shadow: 0 8px 64px 0 var(--main-orange);
+}
+
+.key-container:hover {
+    background: var(--main-orange);
+    box-shadow: 0 8px 96px 0 var(--main-dark);
+    border: 2px solid var(--main-dark);
+    color: var(--main-dark);
+    
+}
+
+.key-container h4:hover,
+.key-content:hover {
+    text-shadow: 1px 1px 0  var(--sub-orange),
+                 2px 2px 0 var(--main-light),
+                3px 3px 1px var(--main-dark);
+}
+
+.container:hover,
+.key-container:hover {
+    transition: box-shadow 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
